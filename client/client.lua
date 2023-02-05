@@ -43,7 +43,7 @@ RegisterNetEvent('addz_qr_barber:client_enteringBarber', function(entity)
     local playerPed = PlayerPedId()
     local isWearHat = IsPedUsingComponent(playerPed, 0x9925C067)
     if isWearHat then
-        ExecuteCommand('hat')
+        RemoveItemFromPedByCategory(playerPed, 0x9925C067)
     end
 
     local playerCoords = GetEntityCoords(playerPed)
@@ -358,6 +358,10 @@ end
 
 function IsPedUsingComponent(ped, clothCategory)
     return Citizen.InvokeNative(0xFB4891BD7578CDC1, ped, clothCategory)
+end
+
+function RemoveItemFromPedByCategory(ped, clothCategory)
+    Citizen.InvokeNative(0xDF631E4BCE1B1FC4, ped, clothCategory, true, true, true)
 end
 
 function CreationCamHead()
