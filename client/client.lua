@@ -335,6 +335,8 @@ RegisterNetEvent('addz_qr_barber:client_cancelBarber', function()
     EndCamera()
     ClearPedTasks(PlayerPedId())
     isInBarber = false
+    Wait(3000)
+    ExecuteCommand('loadskin')
 end)
 
 function NativeSetPedComponentEnabled(ped, componentHash, immediately, isMp)
