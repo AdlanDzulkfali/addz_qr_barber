@@ -5,6 +5,8 @@ Dependencies
 1. qr-Core
 2. qr-target
 3. qr-menu
+4. addz_qr_clothing
+
 
 1. Using qr-target on barber chair 
 ![image](https://user-images.githubusercontent.com/6275693/216803026-96d435ee-a7d4-446c-bdf2-e4aee36ac10f.png)
